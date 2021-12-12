@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXE</title>
+</head>
+<body>
+    <a href="/"><h1>Homepage</h1></a>
+    <h1>Vanjski XML entiteti (XML External Entity, XXE)</h1>
+
+    <form action="/load_xml" method="post">
+        <label for="xml">XML:</label><br>
+        <textarea type="text" name="xml" id="xml" rows="10" cols="80"></textarea><br>
+        <div>
+            <input type="checkbox" id="security" name="security" value="security">
+            <label for="security">Check the box for safe</label>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <% if(text) { %>
+        <%- text %>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensitive data exposure</title>
+</head>
+<body>
+    <a href="/"><h1>Homepage</h1></a>
+    <h1>Nesigurna pohrana osjetljivih podataka (Sensitive data exposure)</h1>
+    <form action="/dataExposure" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" name="username" id="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" id="password"><br><br>
+        <div>
+            <input type="checkbox" id="security" name="security" value="security">
+            <label for="security">Check the box for safe</label>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <% if(user) { %>
+        <p>Prikaz u bazi:</p>
+        <p><%- user %></p>
+    <% } %>
+</body>
+</html>
